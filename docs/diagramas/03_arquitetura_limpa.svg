@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 700" width="1060" height="700" font-family="Helvetica, Arial, sans-serif"><rect width="1060" height="700" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Arquitetura Limpa (como ficou no código)</text>
+<rect x="24" y="56" width="640" height="610" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="36" y="76" text-anchor="start" font-size="12.5" font-weight="bold">4. Frameworks e drivers</text>
+<text x="36" y="92" text-anchor="start" font-size="11.5" fill="#555">FastAPI · SQLAlchemy · MySQL/SQLite · uvicorn · httpx · PyJWT · React + Vite</text>
+<rect x="52" y="126" width="584" height="520" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="64" y="146" text-anchor="start" font-size="12.5" font-weight="bold">3. Adaptadores de interface</text>
+<text x="64" y="162" text-anchor="start" font-size="11.5" fill="#555">pastas rotas/ e adaptadores/</text>
+<rect x="64" y="172" width="128" height="46" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="128.0" y="190.0" text-anchor="middle" font-size="14" font-weight="bold">rotas/</text>
+<text x="128.0" y="208.0" text-anchor="middle" font-size="12" fill="#555">HTTP → caso de uso</text>
+<rect x="200" y="172" width="128" height="46" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="264.0" y="190.0" text-anchor="middle" font-size="14" font-weight="bold">persistencia/</text>
+<text x="264.0" y="208.0" text-anchor="middle" font-size="12" fill="#555">repositórios SQL</text>
+<rect x="336" y="172" width="128" height="46" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="400.0" y="190.0" text-anchor="middle" font-size="14" font-weight="bold">hash · token</text>
+<text x="400.0" y="208.0" text-anchor="middle" font-size="12" fill="#555">scrypt · JWT</text>
+<rect x="472" y="172" width="128" height="46" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="536.0" y="190.0" text-anchor="middle" font-size="14" font-weight="bold">capas · IGDB</text>
+<text x="536.0" y="208.0" text-anchor="middle" font-size="12" fill="#555">arquivos · HTTP</text>
+<rect x="88" y="230" width="512" height="376" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="100" y="250" text-anchor="start" font-size="12.5" font-weight="bold">2. Casos de uso</text>
+<text x="100" y="266" text-anchor="start" font-size="11.5" fill="#555">pastas casos_de_uso/ e portas/</text>
+<rect x="100" y="272" width="108" height="44" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="154.0" y="298.0" text-anchor="middle" font-size="12.5">Usuários</text>
+<rect x="220" y="272" width="108" height="44" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="274.0" y="298.0" text-anchor="middle" font-size="12.5">Jogos</text>
+<rect x="340" y="272" width="108" height="44" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="394.0" y="298.0" text-anchor="middle" font-size="12.5">Avaliações</text>
+<rect x="460" y="272" width="108" height="44" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="514.0" y="298.0" text-anchor="middle" font-size="12.5">Lançamentos</text>
+<rect x="100" y="326" width="480" height="52" rx="8" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="340.0" y="347.0" text-anchor="middle" font-size="14" font-weight="bold">Portas (interfaces que o núcleo exige)</text>
+<text x="340.0" y="365.0" text-anchor="middle" font-size="12" fill="#555">RepositorioJogo · ArmazenamentoCapas · HashSenha · GeradorToken</text>
+<rect x="132" y="398" width="424" height="190" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="144" y="418" text-anchor="start" font-size="12.5" font-weight="bold">1. Entidades</text>
+<text x="144" y="434" text-anchor="start" font-size="11.5" fill="#555">pasta dominio/ (regras que nunca mudam)</text>
+<rect x="148" y="444" width="392" height="46" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="344.0" y="471.0" text-anchor="middle" font-size="12.5">Usuario · Jogo · Avaliacao · Lancamento</text>
+<rect x="148" y="500" width="392" height="46" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="344.0" y="527.0" text-anchor="middle" font-size="12.5">Genero · FaixaEtaria · Console · regras · erros</text>
+<rect x="700" y="70" width="330" height="150" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="865.0" y="94" text-anchor="middle" font-size="14" font-weight="bold">Regra da dependência</text>
+<text x="865.0" y="118" text-anchor="middle" font-size="12.5">O código só aponta para dentro.</text>
+<text x="865.0" y="135" text-anchor="middle" font-size="12.5">Rotas e adaptadores conhecem os casos de uso;</text>
+<text x="865.0" y="152" text-anchor="middle" font-size="12.5">os casos de uso conhecem só as portas;</text>
+<text x="865.0" y="169" text-anchor="middle" font-size="12.5">o domínio não conhece ninguém.</text>
+<text x="865.0" y="187" text-anchor="middle" font-size="12" fill="#555">(banco, web e JWT são detalhes trocáveis)</text>
+<rect x="700" y="250" width="330" height="130" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="865.0" y="274" text-anchor="middle" font-size="14" font-weight="bold">Como se liga</text>
+<text x="865.0" y="298" text-anchor="middle" font-size="12.5">Adaptador implementa a porta (traço) e a</text>
+<text x="865.0" y="315" text-anchor="middle" font-size="12.5">composição acontece em rotas/deps.py</text>
+<text x="865.0" y="332" text-anchor="middle" font-size="12.5">(Servicos): único lugar que escolhe qual</text>
+<text x="865.0" y="349" text-anchor="middle" font-size="12.5">banco, hash e fonte externa usar.</text>
+<rect x="700" y="410" width="330" height="130" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="865.0" y="434" text-anchor="middle" font-size="14" font-weight="bold">Prova de que funciona</text>
+<text x="865.0" y="458" text-anchor="middle" font-size="12.5">Trocar SQLite por MySQL: só DATABASE_URL.</text>
+<text x="865.0" y="475" text-anchor="middle" font-size="12.5">Trocar RAWG por IGDB: novo adaptador,</text>
+<text x="865.0" y="492" text-anchor="middle" font-size="12.5">casos de uso intactos.</text>
+<text x="865.0" y="509" text-anchor="middle" font-size="12.5">Testes dos casos de uso usam fakes, sem banco.</text>
+<text x="700" y="580" text-anchor="start" font-size="11.5" fill="#555">Cores: azul = núcleo · amarelo = portas · cinza = fora</text></svg>

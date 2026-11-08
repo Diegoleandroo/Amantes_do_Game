@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="Helvetica, Arial, sans-serif"><rect width="1000" height="640" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Sequência: rotina de lançamentos (IGDB)</text>
+<rect x="20" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="90.0" y="86.0" text-anchor="middle" font-size="14" font-weight="bold">Você / agendador</text>
+<path d="M90 104L90 620" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="230" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="300.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Rotina</text>
+<text x="300.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">lançamentos</text>
+<path d="M300 104L300 620" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="450" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="520.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Twitch</text>
+<text x="520.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">OAuth</text>
+<path d="M520 104L520 620" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="660" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="730.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">IGDB</text>
+<text x="730.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">API de jogos</text>
+<path d="M730 104L730 620" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="830" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="900.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Banco</text>
+<text x="900.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">SQL</text>
+<path d="M900 104L900 620" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<path d="M90 140L300 140" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="195.0" y="134" text-anchor="middle" font-size="11.5" fill="#333">roda atualizar_lancamentos.bat</text>
+<path d="M300 170L520 170" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="410.0" y="164" text-anchor="middle" font-size="11.5" fill="#333">pede token (client_credentials)</text>
+<path d="M520 196L300 196" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="410.0" y="190" text-anchor="middle" font-size="11.5" fill="#333">token</text>
+<path d="M300 226L730 226" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="515.0" y="220" text-anchor="middle" font-size="11.5" fill="#333">jogos populares dos próx. 12 meses</text>
+<text x="720" y="248" text-anchor="end" font-size="11" fill="#555">ordem por popularidade · limite 20</text>
+<rect x="40" y="262" width="920" height="310" fill="none" stroke="#555" stroke-width="1.2"/><rect x="40" y="262" width="40" height="20" fill="#eee" stroke="#555" stroke-width="1.2"/><text x="60" y="276" text-anchor="middle" font-size="12" font-weight="bold">alt</text>
+<text x="110" y="290" text-anchor="start" font-size="11.5" fill="#555">[respondeu]</text>
+<path d="M730 312L300 312" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="515.0" y="306" text-anchor="middle" font-size="11.5" fill="#333">nome, data, plataformas, capa</text>
+<text x="310" y="334" text-anchor="start" font-size="11" fill="#555">ordena por data de lançamento</text>
+<path d="M300 364L900 364" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="600.0" y="358" text-anchor="middle" font-size="11.5" fill="#333">troca a tabela Lancamento inteira</text>
+<path d="M900 394L300 394" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="600.0" y="388" text-anchor="middle" font-size="11.5" fill="#333">ok</text>
+<path d="M40 420L960 420" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="110" y="440" text-anchor="start" font-size="11.5" fill="#555">[falhou / fora do ar / sem chave]</text>
+<path d="M730 464L300 464" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="515.0" y="458" text-anchor="middle" font-size="11.5" fill="#333">erro</text>
+<text x="310" y="490" text-anchor="start" font-size="11.5" fill="#555">mantém os lançamentos anteriores</text>
+<path d="M300 540L90 540" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="195.0" y="534" text-anchor="middle" font-size="11.5" fill="#333">resultado (código 0 ou 1)</text></svg>

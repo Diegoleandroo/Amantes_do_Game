@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Helvetica, Arial, sans-serif"><rect width="900" height="520" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – C4 nível 1: contexto</text>
+<rect x="60" y="150" width="200" height="100" rx="8" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="160.0" y="175.5" text-anchor="middle" font-size="14" font-weight="bold">Usuário</text>
+<text x="160.0" y="193.5" text-anchor="middle" font-size="12" fill="#555">[pessoa]</text>
+<text x="160.0" y="215.5" text-anchor="middle" font-size="12.5">cadastra e avalia jogos</text>
+<text x="160.0" y="232.5" text-anchor="middle" font-size="12.5">vê lançamentos</text>
+<rect x="350" y="140" width="220" height="120" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="460.0" y="175.5" text-anchor="middle" font-size="14" font-weight="bold">JogoTeca</text>
+<text x="460.0" y="193.5" text-anchor="middle" font-size="12" fill="#555">[sistema]</text>
+<text x="460.0" y="215.5" text-anchor="middle" font-size="12.5">catálogo colaborativo de</text>
+<text x="460.0" y="232.5" text-anchor="middle" font-size="12.5">jogos, notas e lançamentos</text>
+<rect x="650" y="90" width="220" height="100" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="760.0" y="124.0" text-anchor="middle" font-size="14" font-weight="bold">Twitch (OAuth)</text>
+<text x="760.0" y="142.0" text-anchor="middle" font-size="12" fill="#555">[sistema externo]</text>
+<text x="760.0" y="164.0" text-anchor="middle" font-size="12.5">emite o token de acesso</text>
+<rect x="650" y="230" width="220" height="110" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="760.0" y="260.5" text-anchor="middle" font-size="14" font-weight="bold">IGDB</text>
+<text x="760.0" y="278.5" text-anchor="middle" font-size="12" fill="#555">[sistema externo]</text>
+<text x="760.0" y="300.5" text-anchor="middle" font-size="12.5">lista de jogos populares</text>
+<text x="760.0" y="317.5" text-anchor="middle" font-size="12.5">e imagens de capa</text>
+<path d="M260 200L350 200" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="305" y="188" text-anchor="middle" font-size="11.5" fill="#333">usa (web)</text>
+<path d="M570 170L650 150" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="606" y="148" text-anchor="middle" font-size="11" fill="#333">pede token</text>
+<path d="M570 215L650 265" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="626" y="225" text-anchor="middle" font-size="11" fill="#333">busca jogos</text>
+<text x="24" y="470" text-anchor="start" font-size="11.5" fill="#555">O usuário nunca fala com o IGDB: quem busca é a rotina do JogoTeca. Só as imagens de capa são baixadas pelo navegador.</text></svg>

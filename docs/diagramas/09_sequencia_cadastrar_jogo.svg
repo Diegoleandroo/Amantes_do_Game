@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" font-family="Helvetica, Arial, sans-serif"><rect width="1000" height="760" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Sequência: cadastrar jogo com capa</text>
+<rect x="20" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="90.0" y="86.0" text-anchor="middle" font-size="14" font-weight="bold">Usuário</text>
+<path d="M90 104L90 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="180" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Front-end</text>
+<text x="250.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">React</text>
+<path d="M250 104L250 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="340" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="410.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Rotas HTTP</text>
+<text x="410.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">FastAPI</text>
+<path d="M410 104L410 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="500" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="570.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Caso de uso</text>
+<text x="570.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">CadastrarJogo</text>
+<path d="M570 104L570 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="660" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="730.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Persistência</text>
+<text x="730.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">SQL</text>
+<path d="M730 104L730 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<rect x="820" y="60" width="140" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="890.0" y="77.0" text-anchor="middle" font-size="14" font-weight="bold">Capas</text>
+<text x="890.0" y="95.0" text-anchor="middle" font-size="12" fill="#555">arquivos</text>
+<path d="M890 104L890 712" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<path d="M90 140L250 140" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="170.0" y="134" text-anchor="middle" font-size="11.5" fill="#333">envia formulário</text>
+<path d="M250 170L410 170" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="330.0" y="164" text-anchor="middle" font-size="11.5" fill="#333">POST /jogos (cookie + capa)</text>
+<path d="M410 200L570 200" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="490.0" y="194" text-anchor="middle" font-size="11.5" fill="#333">identifica usuário (JWT)</text>
+<path d="M570 230L730 230" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="650.0" y="224" text-anchor="middle" font-size="11.5" fill="#333">confere gênero, faixa, consoles</text>
+<rect x="40" y="248" width="920" height="452" fill="none" stroke="#555" stroke-width="1.2"/><rect x="40" y="248" width="40" height="20" fill="#eee" stroke="#555" stroke-width="1.2"/><text x="60" y="262" text-anchor="middle" font-size="12" font-weight="bold">alt</text>
+<text x="110" y="276" text-anchor="start" font-size="11.5" fill="#555">[dados ou capa inválidos]</text>
+<path d="M570 300L410 300" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="490.0" y="294" text-anchor="middle" font-size="11.5" fill="#333">erro 422 (capa: só JPG/PNG/WEBP até 2 MB)</text>
+<path d="M410 324L250 324" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="330.0" y="318" text-anchor="middle" font-size="11.5" fill="#333">422</text>
+<path d="M40 344L960 344" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="110" y="364" text-anchor="start" font-size="11.5" fill="#555">[nome já existe entre os jogos ativos]</text>
+<path d="M570 388L410 388" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="490.0" y="382" text-anchor="middle" font-size="11.5" fill="#333">erro 409</text>
+<path d="M410 412L250 412" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="330.0" y="406" text-anchor="middle" font-size="11.5" fill="#333">409</text>
+<path d="M40 432L960 432" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="110" y="452" text-anchor="start" font-size="11.5" fill="#555">[senão]</text>
+<path d="M570 476L730 476" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="650.0" y="470" text-anchor="middle" font-size="11.5" fill="#333">salvar jogo (cadastrado_por)</text>
+<path d="M730 502L570 502" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="650.0" y="496" text-anchor="middle" font-size="11.5" fill="#333">id do jogo</text>
+<path d="M570 534L890 534" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="730.0" y="528" text-anchor="middle" font-size="11.5" fill="#333">guardar capa (nome uuid)</text>
+<path d="M570 566L730 566" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="650.0" y="560" text-anchor="middle" font-size="11.5" fill="#333">salvar nome da capa</text>
+<path d="M570 598L410 598" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="490.0" y="592" text-anchor="middle" font-size="11.5" fill="#333">jogo criado</text>
+<path d="M410 628L250 628" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="330.0" y="622" text-anchor="middle" font-size="11.5" fill="#333">201</text>
+<path d="M250 658L90 658" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="170.0" y="652" text-anchor="middle" font-size="11.5" fill="#333">mostra o jogo na lista</text>
+<text x="24" y="745" text-anchor="start" font-size="11.5" fill="#555">A capa é validada (tipo pelos primeiros bytes e tamanho) ANTES de salvar o jogo.</text></svg>

@@ -1,0 +1,56 @@
+# JogoTeca completo em caixas:  docker compose up --build
+#   Site:  http://localhost:5173      API (documentação): http://localhost:8000/docs
+# Parar:  docker compose down        (os dados ficam guardados nos "volumes")
+# Rotina de lançamentos (sob demanda):  docker compose run --rm rotina
+services:
+  mysql:
+    image: mariadb:11.4  # compatível com MySQL; roda em qualquer processador
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: jogoteca
+      MARIADB_USER: jogoteca
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD:-jogoteca}
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+    volumes: [mysql_dados:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    # sem "ports": o banco NÃO fica exposto ao computador, só as outras caixas falam com ele
+
+  api:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+    environment: &ambiente_api
+      DATABASE_URL: mysql+pymysql://jogoteca:${MYSQL_PASSWORD:-jogoteca}@mysql:3306/jogoteca
+      JWT_SEGREDO: ${JWT_SEGREDO:-segredo-so-para-teste-local-nao-use-em-producao-123456}
+      ORIGENS_FRONT: http://localhost:5173
+      PASTA_CAPAS: /srv/armazenamento/capas
+      TWITCH_CLIENT_ID: ${TWITCH_CLIENT_ID:-}
+      TWITCH_CLIENT_SECRET: ${TWITCH_CLIENT_SECRET:-}
+    volumes: [capas:/srv/armazenamento/capas]
+    ports: ["8000:8000"]
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000
+    restart: unless-stopped
+    depends_on: [api]
+    ports: ["5173:80"]
+
+  rotina:
+    build: ./backend
+    profiles: ["rotina"]   # não sobe sozinha; só quando você pedir
+    depends_on:
+      mysql: { condition: service_healthy }
+    environment: *ambiente_api
+    command: ["python", "-m", "app.rotina_lancamentos"]
+
+volumes:
+  mysql_dados:
+  capas:

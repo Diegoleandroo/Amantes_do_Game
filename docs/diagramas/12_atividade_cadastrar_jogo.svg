@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1040" width="900" height="1040" font-family="Helvetica, Arial, sans-serif"><rect width="900" height="1040" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Atividade: cadastrar jogo</text>
+<ellipse cx="250.0" cy="68.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 80L250 100" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<polygon points="150,135.0 250.0,100 350,135.0 250.0,170" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="139.0" text-anchor="middle" font-size="12.5">Usuário logado?</text>
+<path d="M350 135L520 135" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="127" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="520" y="113" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="620.0" y="139.0" text-anchor="middle" font-size="12.5">Responde 401</text>
+<path d="M720 135L760 135" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="772.0" cy="135.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 170L250 200" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="190" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<polygon points="150,235.0 250.0,200 350,235.0 250.0,270" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="239.0" text-anchor="middle" font-size="12.5">Dados válidos?</text>
+<path d="M350 235L520 235" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="227" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="520" y="213" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="620.0" y="239.0" text-anchor="middle" font-size="12.5">Responde 422</text>
+<path d="M720 235L760 235" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="772.0" cy="235.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 270L250 300" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="290" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<polygon points="150,335.0 250.0,300 350,335.0 250.0,370" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="339.0" text-anchor="middle" font-size="12.5">Referências existem?</text>
+<path d="M350 335L520 335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="327" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="520" y="313" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="620.0" y="339.0" text-anchor="middle" font-size="12.5">Responde 422</text>
+<path d="M720 335L760 335" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="772.0" cy="335.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 370L250 400" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="390" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<polygon points="150,435.0 250.0,400 350,435.0 250.0,470" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="439.0" text-anchor="middle" font-size="12.5">Capa válida?</text>
+<path d="M350 435L520 435" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="427" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="520" y="413" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="620.0" y="439.0" text-anchor="middle" font-size="12.5">Responde 422</text>
+<path d="M720 435L760 435" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="772.0" cy="435.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 470L250 500" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="490" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<polygon points="150,535.0 250.0,500 350,535.0 250.0,570" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="539.0" text-anchor="middle" font-size="12.5">Nome já existe (ativos)?</text>
+<path d="M350 535L520 535" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="527" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<rect x="520" y="513" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="620.0" y="539.0" text-anchor="middle" font-size="12.5">Responde 409</text>
+<path d="M720 535L760 535" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="772.0" cy="535.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<path d="M250 570L250 600" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="590" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="130" y="600" width="240" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="626.0" text-anchor="middle" font-size="12.5">Salvar jogo (guarda quem cadastrou)</text>
+<path d="M250 644L250 680" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<polygon points="150,715.0 250.0,680 350,715.0 250.0,750" fill="#fff4dc" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="719.0" text-anchor="middle" font-size="12.5">Enviou capa?</text>
+<path d="M350 715L470 715" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="360" y="707" text-anchor="start" font-size="11.5" fill="#333">sim</text>
+<rect x="470" y="693" width="210" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="575.0" y="719.0" text-anchor="middle" font-size="12.5">Guardar capa e ligar ao jogo</text>
+<path d="M575 737L575 822L350 822" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<path d="M250 750L250 800" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="258" y="774" text-anchor="start" font-size="11.5" fill="#333">não</text>
+<rect x="150" y="800" width="200" height="44" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="826.0" text-anchor="middle" font-size="12.5">Responde 201 (jogo criado)</text>
+<path d="M250 844L250 890" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<ellipse cx="250.0" cy="902.0" rx="12.0" ry="12.0" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="24" y="960" text-anchor="start" font-size="11.5" fill="#555">Cada &quot;Responde ...&quot; termina o fluxo (nada é salvo). A capa é conferida antes de salvar o jogo.</text></svg>

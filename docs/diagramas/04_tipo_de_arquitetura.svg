@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="Helvetica, Arial, sans-serif"><rect width="1000" height="640" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Tipo de arquitetura: cliente–servidor, API em camadas (monólito modular)</text>
+<rect x="24" y="70" width="200" height="150" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="36" y="90" text-anchor="start" font-size="12.5" font-weight="bold">Cliente</text>
+<text x="36" y="106" text-anchor="start" font-size="11.5" fill="#555">navegador</text>
+<rect x="40" y="120" width="168" height="84" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="124.0" y="148.0" text-anchor="middle" font-size="14" font-weight="bold">Front-end SPA</text>
+<text x="124.0" y="166.0" text-anchor="middle" font-size="12" fill="#555">React + TypeScript</text>
+<text x="124.0" y="184.0" text-anchor="middle" font-size="12" fill="#555">Vite · react-router</text>
+<rect x="300" y="70" width="360" height="330" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="312" y="90" text-anchor="start" font-size="12.5" font-weight="bold">Servidor – API (um só processo)</text>
+<text x="312" y="106" text-anchor="start" font-size="11.5" fill="#555">FastAPI</text>
+<rect x="320" y="110" width="320" height="56" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="133.0" text-anchor="middle" font-size="14" font-weight="bold">Apresentação</text>
+<text x="480.0" y="151.0" text-anchor="middle" font-size="12" fill="#555">rotas · middlewares de segurança</text>
+<rect x="320" y="180" width="320" height="56" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="203.0" text-anchor="middle" font-size="14" font-weight="bold">Aplicação</text>
+<text x="480.0" y="221.0" text-anchor="middle" font-size="12" fill="#555">casos de uso</text>
+<rect x="320" y="250" width="320" height="56" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="273.0" text-anchor="middle" font-size="14" font-weight="bold">Domínio</text>
+<text x="480.0" y="291.0" text-anchor="middle" font-size="12" fill="#555">entidades e regras</text>
+<rect x="320" y="320" width="320" height="56" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="343.0" text-anchor="middle" font-size="14" font-weight="bold">Infraestrutura</text>
+<text x="480.0" y="361.0" text-anchor="middle" font-size="12" fill="#555">repositórios · hash · JWT · capas</text>
+<path d="M480 166L480 180" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<path d="M480 236L480 250" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<path d="M560 320L560 306" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<text x="566" y="316" text-anchor="start" font-size="11" fill="#555">implementa portas</text>
+<rect x="776" y="70" width="214" height="260" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="788" y="90" text-anchor="start" font-size="12.5" font-weight="bold">Dados</text>
+<rect x="792" y="110" width="182" height="70" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="883.0" y="140.0" text-anchor="middle" font-size="14" font-weight="bold">Pasta de capas</text>
+<text x="883.0" y="158.0" text-anchor="middle" font-size="12" fill="#555">arquivos</text>
+<rect x="792" y="200" width="182" height="90" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="883.0" y="231.0" text-anchor="middle" font-size="14" font-weight="bold">Banco de dados</text>
+<text x="883.0" y="249.0" text-anchor="middle" font-size="12" fill="#555">SQLite (padrão)</text>
+<text x="883.0" y="267.0" text-anchor="middle" font-size="12" fill="#555">MySQL (produção)</text>
+<path d="M640 322L700 322L700 145L792 145" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="704" y="138" text-anchor="start" font-size="11" fill="#555">lê/grava</text>
+<path d="M640 348L730 348L730 245L792 245" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="736" y="262" text-anchor="start" font-size="11" fill="#555">SQL</text>
+<path d="M208 162L300 162" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="254" y="150" text-anchor="middle" font-size="11.5" fill="#333">HTTPS</text>
+<text x="254" y="182" text-anchor="middle" font-size="11" fill="#333">JSON</text>
+<rect x="300" y="450" width="360" height="130" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="312" y="470" text-anchor="start" font-size="12.5" font-weight="bold">Processo agendado (outro processo)</text>
+<text x="312" y="486" text-anchor="start" font-size="11.5" fill="#555">mesmo código, sem HTTP</text>
+<rect x="320" y="494" width="320" height="60" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="480.0" y="519.0" text-anchor="middle" font-size="14" font-weight="bold">Rotina de lançamentos</text>
+<text x="480.0" y="537.0" text-anchor="middle" font-size="12" fill="#555">python -m app.rotina_lancamentos</text>
+<rect x="776" y="440" width="214" height="140" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="883.0" y="484.5" text-anchor="middle" font-size="14" font-weight="bold">Serviços externos</text>
+<text x="883.0" y="508.5" text-anchor="middle" font-size="12.5">Twitch OAuth (token)</text>
+<text x="883.0" y="525.5" text-anchor="middle" font-size="12.5">IGDB (jogos, capas)</text>
+<text x="883.0" y="543.5" text-anchor="middle" font-size="12" fill="#555">internet</text>
+<path d="M640 505L752 505L752 270L792 270" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="758" y="420" text-anchor="start" font-size="11" fill="#555">SQL</text>
+<path d="M640 535L776 535" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="708" y="527" text-anchor="middle" font-size="11.5" fill="#333">HTTPS</text>
+<text x="24" y="610" text-anchor="start" font-size="11.5" fill="#555">Cliente–servidor: o navegador só pede e mostra; regras e dados ficam no servidor. Não é microsserviço: a API é um deploy só.</text>
+<text x="24" y="628" text-anchor="start" font-size="11.5" fill="#555">A rotina é um 2º processo do mesmo código: grava os lançamentos no banco e a API só lê. O navegador busca as imagens de capa direto do IGDB.</text></svg>

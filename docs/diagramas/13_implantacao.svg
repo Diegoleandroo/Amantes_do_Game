@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" font-family="Helvetica, Arial, sans-serif"><rect width="1000" height="600" fill="#fff"/><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="#222" stroke-width="1.3"/></marker></defs>
+<text x="24" y="34" text-anchor="start" font-size="16" font-weight="bold" fill="#333">JogoTeca – Implantação (como roda hoje e como irá para produção)</text>
+<rect x="24" y="80" width="230" height="180" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="36" y="100" text-anchor="start" font-size="12.5" font-weight="bold">«dispositivo» Computador</text>
+<text x="36" y="116" text-anchor="start" font-size="11.5" fill="#555">navegador</text>
+<rect x="44" y="130" width="190" height="100" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="139.0" y="164.0" text-anchor="middle" font-size="14" font-weight="bold">Navegador</text>
+<text x="139.0" y="182.0" text-anchor="middle" font-size="12" fill="#555">localhost:5173</text>
+<text x="139.0" y="204.0" text-anchor="middle" font-size="12.5">roda o front-end</text>
+<rect x="320" y="80" width="340" height="430" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="332" y="100" text-anchor="start" font-size="12.5" font-weight="bold">«dispositivo» Servidor / seu PC</text>
+<text x="332" y="116" text-anchor="start" font-size="11.5" fill="#555">hoje: iniciar.bat</text>
+<rect x="340" y="130" width="300" height="66" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="490.0" y="158.0" text-anchor="middle" font-size="14" font-weight="bold">Front-end</text>
+<text x="490.0" y="176.0" text-anchor="middle" font-size="12" fill="#555">Vite (dev) · arquivos estáticos (prod)</text>
+<rect x="340" y="230" width="300" height="70" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="490.0" y="260.0" text-anchor="middle" font-size="14" font-weight="bold">API</text>
+<text x="490.0" y="278.0" text-anchor="middle" font-size="12" fill="#555">uvicorn + FastAPI · porta 8000</text>
+<rect x="340" y="340" width="300" height="70" rx="8" fill="#dce8f7" stroke="#222" stroke-width="1.5"/>
+<text x="490.0" y="370.0" text-anchor="middle" font-size="14" font-weight="bold">Rotina de lançamentos</text>
+<text x="490.0" y="388.0" text-anchor="middle" font-size="12" fill="#555">atualizar_lancamentos.bat · agendar na produção</text>
+<rect x="340" y="430" width="300" height="60" rx="8" fill="#f4f7fb" stroke="#222" stroke-width="1.5"/>
+<text x="490.0" y="455.0" text-anchor="middle" font-size="14" font-weight="bold">Pasta de capas</text>
+<text x="490.0" y="473.0" text-anchor="middle" font-size="12" fill="#555">arquivos locais · /capas</text>
+<rect x="740" y="100" width="230" height="100" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="855.0" y="136.0" text-anchor="middle" font-size="14" font-weight="bold">Banco de dados</text>
+<text x="855.0" y="154.0" text-anchor="middle" font-size="12" fill="#555">SQLite (hoje)</text>
+<text x="855.0" y="172.0" text-anchor="middle" font-size="12" fill="#555">MySQL via docker-compose</text>
+<rect x="740" y="250" width="230" height="90" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="855.0" y="290.0" text-anchor="middle" font-size="14" font-weight="bold">Twitch OAuth</text>
+<text x="855.0" y="308.0" text-anchor="middle" font-size="12" fill="#555">id.twitch.tv/oauth2/token</text>
+<rect x="740" y="360" width="230" height="100" rx="8" fill="#eeeeee" stroke="#222" stroke-width="1.5"/>
+<text x="855.0" y="396.0" text-anchor="middle" font-size="14" font-weight="bold">IGDB</text>
+<text x="855.0" y="414.0" text-anchor="middle" font-size="12" fill="#555">api.igdb.com/v4/games</text>
+<text x="855.0" y="432.0" text-anchor="middle" font-size="12" fill="#555">images.igdb.com (capas)</text>
+<path d="M234 160L340 160" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="287" y="148" text-anchor="middle" font-size="11.5" fill="#333">HTTP</text>
+<path d="M139 230L139 265L340 265" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="240" y="257" text-anchor="middle" font-size="11.5" fill="#333">HTTP · JSON</text>
+<path d="M640 255L660 255L660 140L740 140" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="664" y="200" text-anchor="start" font-size="11.5" fill="#333">SQL</text>
+<path d="M640 350L680 350L680 185L740 185" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="684" y="230" text-anchor="start" font-size="11.5" fill="#333">SQL</text>
+<path d="M640 375L710 375L710 295L740 295" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="714" y="330" text-anchor="start" font-size="11.5" fill="#333">HTTPS</text>
+<path d="M640 395L740 395" fill="none" stroke="#222" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="690" y="413" text-anchor="middle" font-size="11.5" fill="#333">HTTPS</text>
+<text x="24" y="560" text-anchor="start" font-size="11.5" fill="#555">Hoje tudo roda no seu computador (iniciar.bat). Em produção: AMBIENTE=producao, JWT_SEGREDO forte, COOKIE_SEGURO=true, HTTPS, MySQL e rotina agendada.</text>
+<text x="24" y="580" text-anchor="start" font-size="11.5" fill="#555">O navegador também baixa as imagens de capa diretamente do IGDB (images.igdb.com).</text></svg>
