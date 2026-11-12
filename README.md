@@ -136,3 +136,7 @@ O que observar (base para alertas quando houver hospedagem):
 | Vários `401` seguidos do mesmo `ip` | Tentativa de adivinhar senha |
 | `429` (`limite_excedido`) | O limitador de tentativas barrou alguém |
 | `rotina_lancamentos_falhou` | A rotina diária não atualizou (os lançamentos antigos ficaram) |
+
+## Operação
+
+Guia completo de como ligar, atualizar, fazer backup, ler logs e resolver problemas: [docs/OPERACAO.md](docs/OPERACAO.md).
