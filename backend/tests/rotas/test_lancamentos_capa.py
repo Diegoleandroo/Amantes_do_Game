@@ -21,9 +21,10 @@ def test_api_devolve_a_capa_do_lancamento(cliente):
 
 def test_banco_antigo_sem_a_coluna_capa_e_atualizado_sozinho(tmp_path):
     motor = create_engine(f"sqlite:///{tmp_path / 'antigo.db'}")
-    with motor.begin() as c:  # tabela como era antes das capas
-        c.execute(text("CREATE TABLE lancamento (id INTEGER PRIMARY KEY, nome VARCHAR(200), data_lancamento DATE, "
-                       "plataformas VARCHAR(300), origem VARCHAR(30), atualizado_em DATETIME)"))
+    from app.adaptadores.persistencia.modelos import Base
+    Base.metadata.create_all(motor)
+    with motor.begin() as c:  # banco como era antes das capas: sem a coluna e sem registro do Alembic
+        c.execute(text("ALTER TABLE lancamento DROP COLUMN capa_url"))
         c.execute(text("INSERT INTO lancamento (nome, plataformas, origem, atualizado_em) VALUES ('Velho', 'PC', 'RAWG', '2026-01-01')"))
     from sqlalchemy.orm import sessionmaker
     fabrica = sessionmaker(bind=motor, expire_on_commit=False)

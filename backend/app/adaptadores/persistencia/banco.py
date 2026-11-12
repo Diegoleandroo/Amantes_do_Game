@@ -1,7 +1,8 @@
-from sqlalchemy import create_engine, inspect, select, text
+from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
-from app.adaptadores.persistencia.modelos import Base, ConsoleModelo, FaixaEtariaModelo, GeneroModelo
+from app.adaptadores.persistencia.migracoes.aplicar import aplicar_migracoes
+from app.adaptadores.persistencia.modelos import ConsoleModelo, FaixaEtariaModelo, GeneroModelo
 
 GENEROS = ["Ação", "Aventura", "RPG", "Esporte", "Corrida", "Luta", "Estratégia",
            "Simulação", "Quebra-cabeça", "Terror", "Plataforma", "Tiro"]
@@ -19,9 +20,8 @@ def criar_fabrica_de_sessoes(url: str):
 
 
 def preparar_banco(motor, fabrica) -> None:
-    """Cria as tabelas e os dados fixos (gêneros, faixas etárias, consoles) se faltarem."""
-    Base.metadata.create_all(motor)
-    _adicionar_colunas_novas(motor)
+    """Atualiza a estrutura do banco (migrações Alembic) e cria os dados fixos se faltarem."""
+    aplicar_migracoes(motor)
     with fabrica() as s:
         for modelo, campo, valores in (
             (GeneroModelo, "nome", GENEROS),
@@ -32,13 +32,3 @@ def preparar_banco(motor, fabrica) -> None:
                 s.add_all(modelo(**{campo: v}) for v in valores)
         s.commit()
 
-
-def _adicionar_colunas_novas(motor) -> None:
-    """Migração leve: bancos criados em versões antigas ganham as colunas que surgiram depois.
-
-    (Quando o sistema tiver dados reais, trocar por migrações versionadas com Alembic.)
-    """
-    colunas = {c["name"] for c in inspect(motor).get_columns("lancamento")}
-    if "capa_url" not in colunas:
-        with motor.begin() as conexao:
-            conexao.execute(text("ALTER TABLE lancamento ADD COLUMN capa_url VARCHAR(300)"))

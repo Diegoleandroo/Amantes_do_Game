@@ -98,3 +98,16 @@ lançamentos anteriores são mantidos.
 3. Na pasta do projeto: `docker compose up --build`. Site em http://localhost:5173, API em http://localhost:8000/docs.
 4. Lançamentos (precisa das chaves da Twitch no `.env`): `docker compose run --rm rotina`.
 5. Parar: `docker compose down` (os dados ficam nos volumes; para apagar tudo: `docker compose down -v`).
+
+## Banco de dados e migrações (Alembic)
+
+A estrutura das tabelas tem histórico versionado em `backend/app/adaptadores/persistencia/migracoes/versions/`.
+O sistema aplica as migrações sozinho ao iniciar (só o que falta, sem apagar dados). Bancos criados antes do Alembic são adotados automaticamente.
+
+Quando mudar `modelos.py`, crie a migração correspondente (dentro de `backend/`):
+
+```
+alembic revision --autogenerate -m "o que mudou"
+```
+
+Revise o arquivo gerado, rode os testes (há um teste que falha se o modelo e as migrações divergirem) e faça o commit junto com a mudança do modelo.
