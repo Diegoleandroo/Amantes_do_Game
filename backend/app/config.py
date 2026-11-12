@@ -17,6 +17,7 @@ class Config:
     origens_front = [o.strip() for o in os.getenv(
         "ORIGENS_FRONT", "http://localhost:5173,http://127.0.0.1:5173").split(",")]
     pasta_capas = os.getenv("PASTA_CAPAS", "armazenamento/capas")
+    log_nivel = os.getenv("LOG_NIVEL", "INFO")  # DEBUG, INFO, WARNING ou ERROR
     rawg_chave = os.getenv("RAWG_API_KEY", "")
     # IGDB (pertence à Twitch): crie o aplicativo em https://dev.twitch.tv/console
     twitch_client_id = os.getenv("TWITCH_CLIENT_ID", "")

@@ -118,3 +118,21 @@ Revise o arquivo gerado, rode os testes (há um teste que falha se o modelo e as
 - `restaurar_backup.bat`: lista os backups, pede o nome da pasta e a confirmação (`SIM`), faz um backup de segurança do estado atual e restaura.
 - A pasta `backups/` não vai para o GitHub (contém dados de usuários). Copie-a também para outro lugar (pen drive, nuvem pessoal): backup só no mesmo computador não protege contra perda do computador.
 - Teste a restauração de vez em quando: um backup nunca restaurado não é garantia.
+
+## Logs e alertas
+
+A API escreve um evento por linha, em JSON, na saída padrão (`app/logs.py`). Cada requisição tem um número (`id`, também enviado no cabeçalho `X-Request-ID`), método, caminho, status e tempo em ms.
+
+- Ver: `ver_logs.bat` (erros, avisos e os últimos eventos) ou `docker compose logs -f api`.
+- Nível: variável `LOG_NIVEL` (`INFO` por padrão; `DEBUG`, `WARNING`, `ERROR`).
+- Nunca entram nos logs: senha, token, e-mail, cookie, conteúdo enviado. O IP só aparece em eventos de segurança (401, 403, 429).
+- O Docker verifica a saúde da API a cada 15 s (`/saude`); se ela parar de responder, o container fica `unhealthy`.
+
+O que observar (base para alertas quando houver hospedagem):
+
+| Sinal | Significa |
+| --- | --- |
+| `"nivel": "ERROR"` | Algo quebrou; o `id` liga a resposta de erro ao registro com o detalhe |
+| Vários `401` seguidos do mesmo `ip` | Tentativa de adivinhar senha |
+| `429` (`limite_excedido`) | O limitador de tentativas barrou alguém |
+| `rotina_lancamentos_falhou` | A rotina diária não atualizou (os lançamentos antigos ficaram) |

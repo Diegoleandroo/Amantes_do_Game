@@ -1,3 +1,7 @@
+import logging
+import time
+import uuid
+
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -8,6 +12,7 @@ from app.adaptadores.limitador import LimitadorEmMemoria
 from app.adaptadores.persistencia.banco import criar_fabrica_de_sessoes, preparar_banco
 from app.config import Config
 from app.dominio import erros
+from app.logs import configurar_logs, evento
 from app.rotas.api import router
 
 STATUS = {
@@ -24,6 +29,7 @@ TAMANHO_MAX_REQUISICAO = 3 * 1024 * 1024  # a capa tem no máximo 2 MB; sobra fo
 def criar_app(config=None) -> FastAPI:
     cfg = config or Config()
     cfg.validar()
+    configurar_logs(cfg.log_nivel)
     app = FastAPI(title="JogoTeca API")
     motor, fabrica = criar_fabrica_de_sessoes(cfg.database_url)
     preparar_banco(motor, fabrica)
@@ -57,13 +63,40 @@ def criar_app(config=None) -> FastAPI:
             return JSONResponse(status_code=403, content={"codigo": "origem_invalida", "detalhe": "Origem não permitida."})
         return await chamar(request)
 
+    @app.middleware("http")
+    async def registrar_requisicao(request: Request, chamar):
+        """Dá um número a cada requisição, mede o tempo e registra o resultado. Erros inesperados viram 500 genérico."""
+        numero = uuid.uuid4().hex[:12]
+        inicio = time.perf_counter()
+        try:
+            resposta = await chamar(request)
+        except Exception:
+            logging.getLogger("jogoteca").exception(
+                "erro_nao_tratado", extra={"dados": {"id": numero, "metodo": request.method, "caminho": request.url.path}})
+            resposta = JSONResponse(status_code=500, content={
+                "codigo": "erro_interno", "detalhe": "Erro interno. Informe o código ao suporte.", "id": numero})
+        status = resposta.status_code
+        resposta.headers["X-Request-ID"] = numero
+        if request.url.path != "/saude":  # o Docker pergunta a cada 15 s; registrar seria ruído
+            dados = {"id": numero, "metodo": request.method, "caminho": request.url.path, "status": status,
+                     "ms": round((time.perf_counter() - inicio) * 1000)}
+            codigo = getattr(request.state, "codigo_erro", None)
+            if codigo:
+                dados["codigo"] = codigo
+            if status in (401, 403, 429) and request.client:
+                dados["ip"] = request.client.host  # só em eventos de segurança
+            nivel = logging.ERROR if status >= 500 else logging.WARNING if status >= 400 else logging.INFO
+            evento(nivel, "requisicao", **dados)
+        return resposta
+
     app.add_middleware(
         CORSMiddleware, allow_origins=cfg.origens_front, allow_credentials=True,
         allow_methods=["*"], allow_headers=["*"],
     )
 
     @app.exception_handler(erros.ErroDeDominio)
-    async def erro_de_dominio(_: Request, erro: erros.ErroDeDominio):
+    async def erro_de_dominio(request: Request, erro: erros.ErroDeDominio):
+        request.state.codigo_erro = erro.codigo
         status = next((s for t, s in STATUS.items() if isinstance(erro, t)), 400)
         return JSONResponse(status_code=status, content={"codigo": erro.codigo, "detalhe": erro.mensagem})
 

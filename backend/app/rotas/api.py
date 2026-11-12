@@ -1,9 +1,12 @@
+import logging
+
 from fastapi import APIRouter, Depends, File, Form, Request, Response, UploadFile
 from pydantic import BaseModel
 
 from app.casos_de_uso.visoes import FiltroJogos
 from app.dominio.entidades import DadosJogo
 from app.dominio.regras import TAMANHO_MAX_CAPA
+from app.logs import evento
 from app.rotas import formatos
 from app.rotas.deps import COOKIE, Servicos, usuario_logado
 
@@ -36,6 +39,7 @@ def cadastrar_usuario(corpo: NovoUsuario, sv: Servicos = Depends()):
 def login(corpo: Credenciais, requisicao: Request, resposta: Response, sv: Servicos = Depends()):
     origem = requisicao.client.host if requisicao.client else ""
     usuario, token = sv.fazer_login.executar(corpo.email, corpo.senha, origem)
+    evento(logging.INFO, "login_ok", usuario_id=usuario.id)
     resposta.set_cookie(COOKIE, token, httponly=True, samesite="lax", secure=sv.cfg.cookie_seguro,
                         max_age=sv.cfg.jwt_minutos * 60, path="/")
     return formatos.usuario(usuario)
