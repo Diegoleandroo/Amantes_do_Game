@@ -111,3 +111,10 @@ alembic revision --autogenerate -m "o que mudou"
 ```
 
 Revise o arquivo gerado, rode os testes (há um teste que falha se o modelo e as migrações divergirem) e faça o commit junto com a mudança do modelo.
+
+## Backup e restauração
+
+- `fazer_backup.bat` (duplo clique): salva o banco (`banco.sql`) e as capas em `backups\AAAA-MM-DD_HH-MM\`. O sistema precisa estar ligado.
+- `restaurar_backup.bat`: lista os backups, pede o nome da pasta e a confirmação (`SIM`), faz um backup de segurança do estado atual e restaura.
+- A pasta `backups/` não vai para o GitHub (contém dados de usuários). Copie-a também para outro lugar (pen drive, nuvem pessoal): backup só no mesmo computador não protege contra perda do computador.
+- Teste a restauração de vez em quando: um backup nunca restaurado não é garantia.
